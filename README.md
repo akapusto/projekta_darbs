@@ -8,4 +8,4 @@ normalize_frequencies.py notīra saņemtu pēc count_frequencies.py tabulu no li
 
 encrypt.py - programma, kas ļauj (de)šifrēt .txt failu ar zināmu atslēgu. Šī projekta daļa ir nepieciešama, lai pēc tam būtu ko dešifrēt
 
-decryptor.py - programma, kas mēģina uzlauzt iešifrēto failu un zināmā mērā reducēt tas saturu
+decryptor.py - programma, kas mēģina uzlauzt iešifrēto failu un zināmā mērā reducēt tas saturu(WIP)
