@@ -36,9 +36,9 @@ ALPHABET = ['o', 'd', 'i', ' ', 'u', 'c',
 
 def save(text):
     #
-    # saglabā tekstu jaunajā failā un atgriež Path() uz to
+    # saglabā tekstu jaunajā failā un atgriež path uz to
     #
-    folder = thisDir / 'encrypted_texts'
+    folder = thisDir / 'encrypted_texts' # veidojam mapi ar visiem tekstiem kuri bus iešifreti
     folder.mkdir(exist_ok=True)
     countFiles = sum(1 for file in folder.iterdir() if file.is_file())
     newFileName = folder / f'encrypter_file{countFiles}.txt'
@@ -66,7 +66,6 @@ def crypto(text,key,mode):    # mode = 'encrypt' or 'decrypt'
     #
     # (de)šifrēšanas algoritms
     #
-
     text=text.lower() # parveidojam visu tekstu uz maziem burtiem, lai samazinātu unikālo simbolu skaitu šifrējamā tekstā
     text = validate(text)
     if mode == 'encrypt':
@@ -85,6 +84,9 @@ def crypto(text,key,mode):    # mode = 'encrypt' or 'decrypt'
         result+=ALPHABET[text_indexes[i]%len(ALPHABET)]
     return result
 def ask_file():
+    #
+    # atver logu kurā var izvēlēties failu šifrēšanai
+    #
     global sub
     def chose(mode,source):
         global sub
